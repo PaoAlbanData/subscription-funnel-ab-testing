@@ -16,10 +16,9 @@ El equipo de producto propone cambiar el paywall (ofrecer 7 días de prueba grat
 | Fase | Qué se hace | Herramientas |
 |---|---|---|
 | Datos | Generación de eventos sintéticos realistas (usuarios, versiones de app, suscripciones) | Python, NumPy, pandas |
-| Transformación | Modelos por capas (staging → intermedio → marts) con tests de calidad | dbt, DuckDB, SQL |
-| Análisis | Funnel, cohortes de retención, churn y LTV | SQL, pandas |
-| Experimento | Test A/B con enfoque frecuentista y bayesiano | SciPy |
-| Calidad | Detección de anomalías en métricas diarias | Python |
+| Análisis | Consultas de funnel, conversión por plataforma y retención | SQL, DuckDB |
+| Experimento | Test A/B de proporciones y control de cancelaciones | SciPy |
+| Calidad | Comprobaciones de calidad: duplicados, fechas imposibles, coherencia del funnel | Python, SQL |
 | Demo | App interactiva con funnel, resultado del test y semáforo de calidad | Streamlit, Plotly |
 
 ## Datos
@@ -50,7 +49,7 @@ python -m venv .venv
 pip install -r requirements.txt
 ```
 
-Los siguientes pasos (generar datos, ejecutar dbt, lanzar la app) se añadirán en cada fase.
+Los siguientes pasos (generar datos, ejecutar el análisis, lanzar la app) se añadirán en cada fase.
 
 ## Autora
 
