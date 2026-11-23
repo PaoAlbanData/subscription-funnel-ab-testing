@@ -1,0 +1,17 @@
+# Datos y análisis
+pandas==2.2.3
+numpy==2.1.3
+scipy==1.14.1
+pyyaml==6.0.2
+
+# Base de datos analítica y transformación
+duckdb==1.1.3
+dbt-core==1.8.9
+dbt-duckdb==1.8.4
+
+# Visualización y demo
+plotly==5.24.1
+streamlit==1.40.1
+
+# Calidad de código
+pytest==8.3.3

@@ -1,0 +1,28 @@
+# Configuración central del proyecto.
+# Todo parámetro que cambie resultados vive aquí, no dentro del código.
+
+project:
+  name: subscription-funnel-ab-testing
+  random_state: 42          # semilla fija: mismos datos y resultados en cada ejecución
+
+paths:
+  raw_data: data/raw
+  processed_data: data/processed
+  database: data/processed/analytics.duckdb
+  figures: reports/figures
+
+simulation:
+  n_users: 50000            # usuarios que instalan la app en el periodo
+  start_date: "2025-01-01"
+  end_date: "2025-06-30"
+  app_versions: ["3.0", "3.1", "3.2"]
+  platforms: ["ios", "android"]
+
+experiment:
+  name: paywall_trial_7d
+  start_date: "2025-04-01"
+  end_date: "2025-04-30"
+  allocation: 0.5           # % de usuarios asignados a la variante
+  min_detectable_effect: 0.01   # mejora mínima (absoluta) en conversión que nos interesa detectar
+  alpha: 0.05
+  power: 0.80
